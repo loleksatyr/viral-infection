@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class CustomerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float sphereRadius = 15f;
+    public bool isActive = false;
+    public GameObject nextIndicator;
+    public GameObject currentIndicator;
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (isActive)
+        {
+            currentIndicator.transform.position = gameObject.transform.position + new Vector3(0, 2f, 0);
+
+            nextIndicator.transform.position = new Vector3(-10000f, -10000f, -10000f);
+            Collider[] customerColliders = Physics.OverlapSphere(gameObject.transform.position, sphereRadius);
+            foreach (Collider collider in customerColliders)
+            {
+                Debug.Log(collider.gameObject.tag);
+
+                if (collider.gameObject.tag == "Customer" && collider.gameObject.GetComponent<CustomerController>().isActive == false)
+                {
+                    nextIndicator.transform.position = collider.gameObject.transform.position + new Vector3(0, 2f, 0);
+                    break; 
+                }
+            }
+        }
     }
 }
