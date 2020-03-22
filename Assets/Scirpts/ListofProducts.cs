@@ -11,14 +11,12 @@ public class ListofProducts : MonoBehaviour
     public GameObject checkout;
     public float rand;
     public bool firstProduct = false;
-    public float firstRand = Random.RandomRange(0f, 10f);
     int product = 0;
     public bool endShop = false;
 
-
-
     private void FixedUpdate()
     {
+        float firstRand = Random.RandomRange(0f, 10f);
         int firstRandint = (int)firstRand;
 
         agent.SetDestination(products[firstRandint].transform.position);
