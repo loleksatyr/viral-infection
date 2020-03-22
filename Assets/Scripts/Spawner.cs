@@ -6,6 +6,8 @@ public class Spawner : MonoBehaviour
 {
     public float SpawnInterval = 5f;
     public List<GameObject> CustomerPrefabs;
+    public int maxToSpawn = 10;
+    public int currentlySpawn = 0;
 
     void Start()
     {
@@ -14,9 +16,10 @@ public class Spawner : MonoBehaviour
 
     void SpawnCustomer()
     {
-        if (CustomerPrefabs.Count > 0) {
+        if (CustomerPrefabs.Count > 0 && currentlySpawn > maxToSpawn) {
             Random random = new Random();
             Instantiate(CustomerPrefabs[(int)Mathf.Round(Random.Range(0, CustomerPrefabs.Count))], gameObject.transform.position, Quaternion.identity);
+            currentlySpawn++;
         }
     }
 }
