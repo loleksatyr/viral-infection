@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-using System.Collections;
-using 
+
 
 public class Office_Script : MonoBehaviour
 {
@@ -14,11 +13,7 @@ public class Office_Script : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
-        // Disabling auto-braking allows for continuous movement
-        // between points (ie, the agent doesn't slow down as it
-        // approaches a destination point).
-        agent.autoBraking = false;
+  agent.autoBraking = false;
 
         GotoNextPoint();
     }
@@ -26,37 +21,35 @@ public class Office_Script : MonoBehaviour
 
     void GotoNextPoint()
     {
-        // Returns if no points have been set up
-        if (points.Length == 0)
+         if (points.Length == 0)
             return;
 
-        // Set the agent to go to the currently selected destination.
-        agent.destination = points[destPoint].position;
+         agent.destination = points[destPoint].position;
 
-        // Choose the next point in the array as the destination,
-        // cycling to the start if necessary.
         destPoint = (destPoint + 1) % points.Length;
     }
 
 
     void Update()
     {
-        // Choose the next destination point when the agent gets
-        // close to the current one.
-        // if (Physics.OverlapSphere(position.transform.position, 1f).) {
-
-
-        // }
-        //else {
-
+        
         Collider[] customerColliders = Physics.OverlapSphere(gameObject.transform.position, 1f);
         foreach (Collider collider in customerColliders)
         {
             if (collider.gameObject.tag == "Customer" && collider.gameObject.GetComponent<CustomerController>().hasVirus)
             {
-                // ...
+                agent.destination = collider.gameObject.transform.position;
+                Collider[] customerColliders2 = Physics.OverlapSphere(gameObject.transform.position, 0.1f);
+                foreach (Collider colliders in customerColliders2)
+                {
+                    if (colliders.gameObject.tag == "Customer" && colliders.gameObject.GetComponent<CustomerController>().hasVirus)
+                    {
+                        Destroy(colliders.gameObject);
+                    }
+                }
             }
-            else {
+            else
+            {
                 if (!agent.pathPending && agent.remainingDistance < 0.5f)
                     GotoNextPoint();
 
