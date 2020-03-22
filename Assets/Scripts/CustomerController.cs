@@ -10,8 +10,31 @@ public class CustomerController : MonoBehaviour
     public GameObject nextIndicator;
     public GameObject currentIndicator;
     public GameObject camera;
+    public GameObject virusParticlePrefab;
+    private GameObject virusParticle;
+    public bool hasVirus = false;
     [SerializeField] private Vector3 cameraOffset = new Vector3(0f, 0f, 0f);
-    
+    [SerializeField] private float progress = 0f;
+
+    private void Start()
+    {
+        InvokeRepeating("IncreaseProgress", 1f, 1f);
+    }
+
+    void IncreaseProgress()
+    {
+        if (isActive && hasVirus == false)
+        {
+            progress++;
+        }
+
+        if (progress > 5 && hasVirus == false)
+        {
+            hasVirus = true;
+            virusParticle = Instantiate(virusParticlePrefab);
+        }
+    }
+
     void Activate()
     {
         isActive = true;
@@ -22,6 +45,7 @@ public class CustomerController : MonoBehaviour
         yield return new WaitForSeconds(1/20);
         isActive = false;
         customer.GetComponent<CustomerController>().isActive = true;
+        
     }
 
     void FixedUpdate()
@@ -58,6 +82,11 @@ public class CustomerController : MonoBehaviour
             {
                 nextIndicator.transform.position = nearestCustomer.transform.position + new Vector3(0, 2f, 0);
             }
+        }
+
+        if (hasVirus)
+        {
+            virusParticle.transform.position = gameObject.transform.position;
         }
     }
 }
