@@ -70,6 +70,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   points: []
+--- !u!65 &5218787198082677134
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919137462676111457}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &7687310994108891088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,7 +148,7 @@ PrefabInstance:
     - target: {fileID: 7381327469313327025, guid: 9aada33817f8ff3408956c0e3adbe542,
         type: 3}
       propertyPath: m_Name
-      value: BOY
+      value: BOY Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7381327469313327025, guid: 9aada33817f8ff3408956c0e3adbe542,
         type: 3}

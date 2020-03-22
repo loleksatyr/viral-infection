@@ -5,7 +5,6 @@ using UnityEngine;
 public class CustomerController : MonoBehaviour
 {
     [SerializeField] private float sphereRadius = 15f;
-    [SerializeField] private GameObject nearestCustomer = null;
     public bool isActive = false;
     public GameObject nextIndicator;
     public GameObject currentIndicator;
@@ -15,10 +14,12 @@ public class CustomerController : MonoBehaviour
     public bool hasVirus = false;
     [SerializeField] private Vector3 cameraOffset = new Vector3(0f, 0f, 0f);
     [SerializeField] private float progress = 0f;
+    public GameplayController gameplayController;
 
     private void Start()
     {
         InvokeRepeating("IncreaseProgress", 1f, 1f);
+        gameplayController = camera.GetComponent<GameplayController>();
     }
 
     void IncreaseProgress()
@@ -32,6 +33,7 @@ public class CustomerController : MonoBehaviour
         {
             hasVirus = true;
             virusParticle = Instantiate(virusParticlePrefab);
+            gameplayController.AddScore();
         }
     }
 
@@ -45,7 +47,6 @@ public class CustomerController : MonoBehaviour
         yield return new WaitForSeconds(1/20);
         isActive = false;
         customer.GetComponent<CustomerController>().isActive = true;
-        
     }
 
     void FixedUpdate()
@@ -56,12 +57,7 @@ public class CustomerController : MonoBehaviour
             camera.transform.position = gameObject.transform.position + cameraOffset;
 
             float nearestDistance = float.MaxValue;
-
-            if (Input.GetKeyDown("space"))
-            {
-                StartCoroutine(SwitchCustomer(nearestCustomer));
-            }
-
+            GameObject nearestCustomer = null;
             nextIndicator.transform.position = new Vector3(-10000f, -10000f, -10000f);
             Collider[] customerColliders = Physics.OverlapSphere(gameObject.transform.position, sphereRadius);
 
@@ -82,11 +78,19 @@ public class CustomerController : MonoBehaviour
             {
                 nextIndicator.transform.position = nearestCustomer.transform.position + new Vector3(0, 2f, 0);
             }
+
+            if (Input.GetKeyDown("space") && nearestCustomer != null)
+            {
+                StartCoroutine(SwitchCustomer(nearestCustomer));
+            }
         }
 
         if (hasVirus)
         {
-            virusParticle.transform.position = gameObject.transform.position;
+            if (gameObject != null && virusParticle != null)
+            {
+                virusParticle.transform.position = gameObject.transform.position;
+            }
         }
     }
 }

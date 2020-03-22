@@ -70,6 +70,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   points: []
+--- !u!65 &7777823229605539273
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732147522659738296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2809149732802866107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,7 +148,7 @@ PrefabInstance:
     - target: {fileID: 3230495482917275907, guid: 0c4dfa6c3be9d1d4198f83538cfff820,
         type: 3}
       propertyPath: m_Name
-      value: GRAZYNKA
+      value: GRAZYNKA Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3230495482917275907, guid: 0c4dfa6c3be9d1d4198f83538cfff820,
         type: 3}

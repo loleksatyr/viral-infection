@@ -46,32 +46,11 @@ public class CustomerMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        Collider[] customerColliders = Physics.OverlapSphere(gameObject.transform.position, 1f);
-        foreach (Collider collider in customerColliders)
-        {
-            if (collider.gameObject.tag == "Customer" && collider.gameObject.GetComponent<CustomerController>().hasVirus)
-            {
-                agent.destination = collider.gameObject.transform.position;
-                Collider[] customerColliders2 = Physics.OverlapSphere(gameObject.transform.position, 0.1f);
-                foreach (Collider colliders in customerColliders2)
-                {
-                    if (colliders.gameObject.tag == "Customer" && colliders.gameObject.GetComponent<CustomerController>().hasVirus)
-                    {
-                        Destroy(colliders.gameObject);
-                    }
-                }
-            }
-            else
-            {
-                if (!agent.pathPending && agent.remainingDistance < 0.5f)
-                    GotoNextPoint();
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            GotoNextPoint();
 
-                if (!agent.isOnNavMesh)
-                    return;
-            }
-        }
-
-        //  }
+        if (!agent.isOnNavMesh)
+            return;
     }
 }
 

@@ -70,6 +70,19 @@ MonoBehaviour:
   hasVirus: 0
   cameraOffset: {x: 0, y: 19, z: -18}
   progress: 0
+--- !u!65 &445620782164816581
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7640256963136633700}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1677780326049380707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,7 +148,7 @@ PrefabInstance:
     - target: {fileID: 9029446134429991431, guid: 336b902c29141b64885c8c27e082a81c,
         type: 3}
       propertyPath: m_Name
-      value: JANUSZ
+      value: JANUSZ Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9029446134429991431, guid: 336b902c29141b64885c8c27e082a81c,
         type: 3}

@@ -11,12 +11,12 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnCustomer", 1f, 1f);
+        InvokeRepeating("SpawnCustomer", 1f, SpawnInterval);
     }
 
     void SpawnCustomer()
     {
-        if (CustomerPrefabs.Count > 0 && currentlySpawn > maxToSpawn) {
+        if (CustomerPrefabs.Count > 0 && currentlySpawn < maxToSpawn) {
             Random random = new Random();
             Instantiate(CustomerPrefabs[(int)Mathf.Round(Random.Range(0, CustomerPrefabs.Count))], gameObject.transform.position, Quaternion.identity);
             currentlySpawn++;
