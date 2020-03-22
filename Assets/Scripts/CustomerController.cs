@@ -5,12 +5,13 @@ using UnityEngine;
 public class CustomerController : MonoBehaviour
 {
     [SerializeField] private float sphereRadius = 15f;
+    [SerializeField] private GameObject nearestCustomer = null;
     public bool isActive = false;
     public GameObject nextIndicator;
     public GameObject currentIndicator;
     public GameObject camera;
     [SerializeField] private Vector3 cameraOffset = new Vector3(0f, 0f, 0f);
-
+    
     void Activate()
     {
         isActive = true;
@@ -30,11 +31,15 @@ public class CustomerController : MonoBehaviour
             currentIndicator.transform.position = gameObject.transform.position + new Vector3(0, 2f, 0);
             camera.transform.position = gameObject.transform.position + cameraOffset;
 
+            float nearestDistance = float.MaxValue;
+
+            if (Input.GetKeyDown("space"))
+            {
+                StartCoroutine(SwitchCustomer(nearestCustomer));
+            }
+
             nextIndicator.transform.position = new Vector3(-10000f, -10000f, -10000f);
             Collider[] customerColliders = Physics.OverlapSphere(gameObject.transform.position, sphereRadius);
-
-            GameObject nearestCustomer = null;
-            float nearestDistance = float.MaxValue;
 
             foreach (Collider collider in customerColliders)
             {
@@ -46,19 +51,12 @@ public class CustomerController : MonoBehaviour
                         nearestDistance = distance;
                         nearestCustomer = collider.gameObject;
                     }
-
-                    if (nearestCustomer != null)
-                    {
-                        nextIndicator.transform.position = nearestCustomer.transform.position + new Vector3(0, 2f, 0);
-                    }
-
-                    if (Input.GetKeyDown("space"))
-                    {
-                        StartCoroutine(SwitchCustomer(nearestCustomer));
-                    }
-
-                    break; 
                 }
+            }
+
+            if (nearestCustomer != null)
+            {
+                nextIndicator.transform.position = nearestCustomer.transform.position + new Vector3(0, 2f, 0);
             }
         }
     }
