@@ -121,6 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 92015431}
+  - component: {fileID: 92015432}
   m_Layer: 0
   m_Name: Products
   m_TagString: Untagged
@@ -142,6 +143,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &92015432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92015430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 313644eb26157d54da58dc0a08e843cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  products:
+  - {fileID: 6090095787885484989}
+  - {fileID: 1366074993}
+  - {fileID: 1485326447}
+  - {fileID: 1334523380}
+  - {fileID: 791196128}
+  - {fileID: 1518567870}
+  - {fileID: 1512994829}
+  - {fileID: 745889392}
+  - {fileID: 248886250}
+  - {fileID: 1413083925}
+  - {fileID: 1036700037}
 --- !u!1001 &248886249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -172,7 +197,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -182,7 +207,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -197,7 +222,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -209,8 +234,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Alkohole
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &248886250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 248886249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &264543412
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,8 +648,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Slodycze
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &745889392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 745889391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &791196127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -644,7 +691,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -654,7 +701,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -669,7 +716,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -686,8 +733,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Napoje
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &791196128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 791196127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1036700036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -755,8 +813,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Artykulysuche
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &1036700037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1036700036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1273470819
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +948,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -889,7 +958,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -904,7 +973,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -921,8 +990,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Pieczywo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &1334523380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1334523379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1359416671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,7 +1215,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -1145,7 +1225,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -1160,7 +1240,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -1177,8 +1257,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Warzywa
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &1366074993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1366074992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1413083924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1246,8 +1337,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Przetwory
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &1413083925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1413083924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1477304547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,8 +1513,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Mieso
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &1485326447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1485326446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1512994828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1480,8 +1593,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Przyprawy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &1512994829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1512994828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1518567869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1512,7 +1636,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -1522,7 +1646,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -1537,7 +1661,7 @@ PrefabInstance:
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6090095787614797961, guid: 8c33e306f2362c8498cadb7b88e3aebf,
         type: 3}
@@ -1554,8 +1678,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Chemia
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &1518567870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1518567869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1975095074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,5 +1946,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf
       objectReference: {fileID: 0}
+    - target: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+        type: 3}
+      propertyPath: m_Name
+      value: Nabial
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c33e306f2362c8498cadb7b88e3aebf, type: 3}
+--- !u!1 &6090095787885484989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116522504469027696, guid: 8c33e306f2362c8498cadb7b88e3aebf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6090095787885484988}
+  m_PrefabAsset: {fileID: 0}
