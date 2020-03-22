@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using 
 
 public class Office_Script : MonoBehaviour
 {
@@ -42,16 +43,28 @@ public class Office_Script : MonoBehaviour
     {
         // Choose the next destination point when the agent gets
         // close to the current one.
-       // if (Physics.OverlapSphere(position.transform.position, 1f).) {
+        // if (Physics.OverlapSphere(position.transform.position, 1f).) {
 
 
-       // }
+        // }
         //else {
-            if (!agent.pathPending && agent.remainingDistance < 0.5f)
-                GotoNextPoint();
 
-            if (!agent.isOnNavMesh)
-                return;
+        Collider[] customerColliders = Physics.OverlapSphere(gameObject.transform.position, 1f);
+        foreach (Collider collider in customerColliders)
+        {
+            if (collider.gameObject.tag == "Customer" && collider.gameObject.GetComponent<CustomerController>().hasVirus)
+            {
+                // ...
+            }
+            else {
+                if (!agent.pathPending && agent.remainingDistance < 0.5f)
+                    GotoNextPoint();
+
+                if (!agent.isOnNavMesh)
+                    return;
+            }
+        }
+        
       //  }
     }
 }
